@@ -13,9 +13,7 @@ export default function HeroSection() {
       <div className="absolute inset-y-0 right-0 w-1/2 bg-linear-to-l from-primary/10 to-transparent [clip-path:polygon(30%_0,100%_0,100%_100%,0_100%)]" />
 
       <div className="relative w-11/12 mx-auto grid lg:grid-cols-2 gap-12 items-center py-16">
-        {/* LEFT — Content */}
         <div className="max-w-xl">
-          {/* Eyebrow badge */}
           <span className="inline-flex items-center gap-2 bg-primary border border-primary/40 text-gray-100 text-xs font-thin uppercase px-3 py-1.5 rounded-full mb-6">
             <FiZap size={14} /> Train Hard. Live Strong.
           </span>

@@ -6,11 +6,6 @@ import { ChevronRight, Home } from "lucide-react";
 const AboutBanner = () => {
   return (
     <section className="relative min-h-70 md:min-h-60 flex items-center overflow-hidden bg-primary">
-
-      
-    
-
-      {/* Background Overlay */}
       <div className="absolute inset-0 bg-linear-to-r from-footer/95 via-footer/80 to-footer/30" />
 
       {/* Decorative Shape */}

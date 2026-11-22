@@ -25,7 +25,7 @@ const facilities = [
     title: "Fitness & Strength Training",
     description:
       "Training equipment and exercise facilities to help candidates build strength, stamina, and physical endurance.",
-    image: "/army1.jpg",
+    image: "/army2.jpg",
     icon: Dumbbell,
     number: "02",
   },
@@ -34,7 +34,7 @@ const facilities = [
     title: "Obstacle Course Training",
     description:
       "Practical training activities designed to improve agility, coordination, balance, and physical confidence.",
-    image: "/army1.jpg",
+    image: "/army3.jpg",
     icon: Mountain,
     number: "03",
   },
@@ -43,7 +43,7 @@ const facilities = [
     title: "Group Training Environment",
     description:
       "A motivating team environment that encourages discipline, teamwork, confidence, and consistency.",
-    image: "/army1.jpg",
+    image: "/army4.jpg",
     icon: Users,
     number: "04",
   },
