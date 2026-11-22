@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FiStar, FiArrowRight } from "react-icons/fi";
 import TestimonialBanner from "../component/Testimonial/banner";
+import FaqSection from "../component/Home/FaqSection";
 
 const testimonials = [
   {
@@ -145,6 +146,7 @@ export default function TestimonialPage() {
           </div>
         </div>
       </section>
+      <FaqSection/>
     </div>
   );
 }
