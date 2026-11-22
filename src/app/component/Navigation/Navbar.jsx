@@ -33,8 +33,8 @@ export default function Navbar() {
           <span className="grid place-items-center w-10 h-10 rounded-full bg-primary text-secondary group-hover:rotate-12 transition-transform">
             <FiZap size={22} />
           </span>
-          <span className="text-secondary font-black text-lg tracking-widest uppercase leading-none">
-          Physical<span className="text-primary"> Fitness</span>
+          <span className="text-primary font-black text-lg tracking-widest uppercase leading-none">
+          Physical<span className="text-footer"> Fitness</span>
           </span>
         </Link>
 
@@ -66,7 +66,7 @@ export default function Navbar() {
         {/* CTA: Register (always visible on desktop) */}
         <Link
           href="/register"
-          className="hidden lg:inline-flex items-center bg-primary text-white font-black uppercase tracking-wider text-sm px-6 py-3 rounded-full hover:bg-accent duration-500 hover:text-footer transition-colors shadow-lg shadow-primary/20"
+          className="hidden lg:inline-flex items-center bg-footer text-white font-black uppercase tracking-wider text-sm px-6 py-3 rounded-full hover:bg-accent duration-500 hover:text-footer transition-colors shadow-lg shadow-primary/20"
         >
           Register
         </Link>
@@ -109,7 +109,7 @@ export default function Navbar() {
             <Link
               href="/register"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block w-full text-center bg-primary text-white font-black uppercase tracking-wider px-6 py-4 rounded-full hover:bg-accent hover:text-footer transition-colors"
+              className="block w-full text-center bg-footer text-white font-black uppercase tracking-wider px-6 py-4 rounded-full hover:bg-accent hover:text-footer transition-colors"
             >
               Register
             </Link>
