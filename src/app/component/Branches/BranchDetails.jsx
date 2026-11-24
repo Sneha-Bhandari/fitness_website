@@ -7,15 +7,15 @@ export default function BranchDetails({ branch }) {
       <div className="w-11/12 mx-auto">
 
         <div className="max-w-3xl mb-12">
-          <span className="text-primary font-bold uppercase tracking-[3px] text-sm">
+          <span className="text-primary font-semibold uppercase tracking-[3px] text-sm">
             About Our Branch
           </span>
 
-          <h2 className="text-3xl md:text-3xl font-extrabold text-footer mt-3">
+          <h2 className="text-3xl md:text-3xl font-bold text-footer mt-3">
             Welcome to {branch.name}
           </h2>
 
-          <p className="text-gray-600 leading-7 mt-5">
+          <p className="text-gray-600 leading-7 mt-1 text-sm">
             {branch.about}
           </p>
         </div>

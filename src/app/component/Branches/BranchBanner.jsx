@@ -1,5 +1,4 @@
 
-import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight, Home } from "lucide-react";
 
@@ -24,7 +23,6 @@ export default function BranchBanner({ branch }) {
           {branch.name}
         </p>
 
-        {/* Breadcrumb */}
         <div className="flex items-center gap-2 mt-8 text-sm">
           <Link
             href="/"
@@ -51,7 +49,6 @@ export default function BranchBanner({ branch }) {
         </div>
       </div>
 
-      {/* Bottom Accent */}
       <div className="absolute bottom-0 left-0 w-full h-1 bg-secondary" />
     </section>
   );

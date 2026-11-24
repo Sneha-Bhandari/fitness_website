@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -20,6 +21,7 @@ const branches = [
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isBranchMenuOpen, setIsBranchMenuOpen] = useState(false);
+
   const pathname = usePathname();
 
   const navLinks = [
@@ -27,7 +29,6 @@ export default function Navbar() {
     { name: "About Us", href: "/about" },
     { name: "Testimonials", href: "/testimonials" },
     { name: "Team", href: "/team" },
-    { name: "Contact", href: "/contact" },
   ];
 
   const isActive = (href) => {
@@ -55,6 +56,7 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <ul className="hidden lg:flex items-center gap-7 xl:gap-6 text-[15px] font-semibold uppercase tracking-wide">
 
+          {/* Normal Navigation Links */}
           {navLinks.map((link) => {
             const active = isActive(link.href);
 
@@ -78,6 +80,7 @@ export default function Navbar() {
             );
           })}
 
+          {/* Branches Dropdown */}
           <li className="relative group">
             <button
               type="button"
@@ -107,8 +110,27 @@ export default function Navbar() {
               </div>
             </div>
           </li>
+
+          {/* Contact - After Branches */}
+          <li className="relative">
+            <Link
+              href="/contact"
+              className={`transition-colors hover:text-primary uppercase ${
+                isActive("/contact") ? "text-primary" : "text-footer/60"
+              }`}
+            >
+              Contact
+            </Link>
+
+            <span
+              className={`absolute -bottom-1 left-0 h-0.5 bg-primary rounded-full transition-all duration-300 ${
+                isActive("/contact") ? "w-full" : "w-0"
+              }`}
+            />
+          </li>
         </ul>
 
+        {/* Desktop Register Button */}
         <Link
           href="/register"
           className="hidden lg:inline-flex items-center bg-footer text-white font-black uppercase tracking-wider text-sm px-6 py-3 rounded-full hover:bg-accent hover:text-footer duration-300 transition-colors shadow-lg shadow-primary/20"
@@ -116,7 +138,9 @@ export default function Navbar() {
           Register
         </Link>
 
+        {/* Mobile Menu Button */}
         <button
+          type="button"
           className="lg:hidden text-primary focus:outline-none cursor-pointer"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle Menu"
@@ -128,11 +152,14 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div
         className={`lg:hidden absolute top-full left-0 w-full bg-footer border-t border-accent/30 shadow-2xl overflow-hidden transition-[max-height,opacity] duration-300 ${
-          isMobileMenuOpen ? "max-h-[90vh] opacity-100" : "max-h-0 opacity-0"
+          isMobileMenuOpen
+            ? "max-h-[90vh] opacity-100"
+            : "max-h-0 opacity-0"
         }`}
       >
         <ul className="flex flex-col px-6 py-6 space-y-1 text-base font-bold uppercase tracking-wide text-secondary/90">
 
+          {/* Normal Navigation Links */}
           {navLinks.map((link) => {
             const active = isActive(link.href);
 
@@ -161,6 +188,7 @@ export default function Navbar() {
               }`}
             >
               Branches
+
               <FiChevronDown
                 className={`transition-transform duration-300 ${
                   isBranchMenuOpen ? "rotate-180" : ""
@@ -182,13 +210,28 @@ export default function Navbar() {
                     setIsBranchMenuOpen(false);
                   }}
                   className={`block py-2 pl-5 text-sm hover:text-primary ${
-                    pathname === branch.href ? "text-primary" : "text-secondary/80"
+                    pathname === branch.href
+                      ? "text-primary"
+                      : "text-secondary/80"
                   }`}
                 >
                   {branch.name}
                 </Link>
               ))}
             </div>
+          </li>
+
+          {/* Contact - After Branches */}
+          <li>
+            <Link
+              href="/contact"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`block w-full py-3 border-b border-accent/20 transition-colors hover:text-primary ${
+                isActive("/contact") ? "text-primary" : ""
+              }`}
+            >
+              Contact
+            </Link>
           </li>
 
           {/* Register */}
